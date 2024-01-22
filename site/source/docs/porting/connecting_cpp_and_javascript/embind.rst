@@ -1024,6 +1024,16 @@ Not all of embind's features are currently supported, but many of the commonly u
 ones are.  Examples of input and output can be seen in `embind_tsgen.cpp`_ and
 `embind_tsgen.d.ts`_.
 
+Embind Debugging
+======================
+
+TO help you debug, you can use enable `-sEMBIND_DEBUG` which log every wasm call.
+To use it, invoke *emcc* with the `-sEMBIND_DEBUG` option
+
+emcc -lembind quick_example.cpp -sEMBIND_DEBUG example.js
+
+Running this command will build the program with an js call every time you call the wasm.
+
 Performance
 ===========
 
